@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+cont
+{% endblock title %}
+{% block body %}
+<div class="container my-5">
+<h1 class="text-center my-5">CONTACT US</h1>
+<img src="https://images.unsplash.com/photo-1510279770292-4b34de9f5c23?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8bmF0dXJlLHdhdGVyfHx8fHx8MTY2MzY3MjkwMg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600 " class="d-block w-100" alt="...">
+</div>
+<div class="container">
+    <form method="post" action="/contact">
+      {% csrf_token %}
+<div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="email">
+  </div>
+
+  <div class="form-group">
+    <label for="name">phone</label>
+    <input type="phone" class="form-control" id="phone" name="phone" placeholder="phone">
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</div>
+</form>
+{% endblock body %}
